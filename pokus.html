@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <div>
+        <label for="firstName"> First Name </label><br />
+        <input id="firstName" type="text" />
+      </div>
+      <div>
+        <label for="lastName"> First Name </label><br />
+        <input id="lastName" type="text" />
+      </div>
+      <div>
+        <button id="submit" type="submit">Next Page</button>
+      </div>
+    </form>
+
+    <script>
+      const form = document.getElementById("form");
+      const firstName = document.getElementById("firstName");
+      const lastName = document.getElementById("lastName");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const firstNameValue = firstName.value;
+        const lastNameValue = lastName.value;
+
+        localStorage.setItem("first-name", firstNameValue);
+        localStorage.setItem("last-name", lastNameValue);
+
+        window.location.href = "next.html";
+      });
+    </script>
+
+    <div class="menu">
+      <div id="matematika1" onClick="reply_click(this.id)" class="item">
+        <a href="#">Dashboard</a>
+      </div>
+      <div id="Forms" onClick="reply_click(this.id)" class="item">
+        <a href="#">Forms</a>
+      </div>
+      <div id="Settings" onClick="reply_click(this.id)" class="item">
+        <a href="#">Settings</a>
+      </div>
+    </div>
+
+    <script>
+      function reply_click(clicked_id) {
+        localStorage.setItem("page-value", clicked_id);
+        console.log(clicked_id);
+
+        window.location.href = "/pages/" + clicked_id + ".html";
+      }
+    </script>
+  </body>
+</html>
