@@ -7,14 +7,13 @@
     <div class="close-btn">
       <i class="fas fa-times"></i>
     </div>
-    <img
-      src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
-      alt="Logo"
-    />
+    <img src="#" alt="Logo" />
     <h1>Logo</h1>
     <div class="menu">
       <div class="item">
-        <a href="#"><i class="fas fa-desktop"></i>Dashboard</a>
+        <a href="#" id="static" onClick="reply_click(this.id)"
+          ><i class="fas fa-desktop"></i>Statistika</a
+        >
         <div class="item">
           <a class="sub-btn"
             ><i class="fas fa-table"></i>Matematika<i
@@ -22,16 +21,37 @@
             ></i
           ></a>
           <div class="sub-menu">
-            <a href="/pages/matematika1.html" class="sub-item">Matematika#1</a>
-            <a href="" class="sub-item">Matematika#2</a>
-            <a href="" class="sub-item">Matematika#3</a>
+            <a
+              href="/pages/Matematika1.html"
+              id="matematika1"
+              onClick="reply_click(this.id)"
+              class="sub-item"
+              >Matematika#1</a
+            >
+            <a
+              href="/pages/Matematika2.html"
+              id="matematika2"
+              onClick="reply_click(this.id)"
+              class="sub-item"
+              >Matematika#2</a
+            >
           </div>
         </div>
         <div class="item">
-          <a href="#"><i class="fas fa-th"></i>Forms</a>
+          <a href="#" id="economy" onClick="reply_click(this.id)"
+            ><i class="fas fa-th"></i>Ekonomie</a
+          >
         </div>
         <div class="item"></div>
       </div>
     </div>
   </header>
 </div>
+
+<script>
+  function reply_click(clicked_id) {
+    localStorage.setItem("page-value", clicked_id);
+
+    //window.location.href = "/pages/" + clicked_id + ".html";
+  }
+</script>

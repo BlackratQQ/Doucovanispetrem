@@ -16,21 +16,26 @@ class UserCard extends HTMLElement {
       <h1>Logo</h1>
       <div class="menu">
         <div class="item">
-          <a onClick="reply_click(this.id)><i class="fas fa-desktop"></i>Statistika</a>
+          <a href="#" 
+          id="statistika"
+          onClick="reply_click(this.id)>
+          <i class="fas fa-desktop"></i>
+          Statistika</a>
+
           <div class="item">
-            <a class="sub-btn"
-              >Matematika<i
-                class="fas fa-angle-right dropdown"
-              ></i
-            ></a>
+            <a class="sub-btn">
+            Matematika
+            <i class="fas fa-angle-right dropdown"></i></a>
             <div class="sub-menu">
-              <a class="sub-item">Matematika#1</a>
-              <a class="sub-item">Matematika#2</a>
-              <a class="sub-item">Matematika#3</a>
+              <a href="/pages/Matematika1.html" id="Matematika1" onClick="reply_click(this.id)"class="sub-item">Matematika#1</a>
+              <a href="/pages/Matematika2.html" id="Matematika2" onClick="reply_click(this.id)"class="sub-item">Matematika#2</a>
             </div>
           </div>
           <div class="item">
-            <a id="ekonomy"onClick="reply_click(this.id)><i class="fas fa-th"></i>Ekonomy</a>
+            <a href="#" 
+            id="ekonomy"onClick="reply_click(this.id)>
+            <i class="fas fa-th"></i>
+            Ekonomy</a>
           </div>
         </div>
       </div>
@@ -64,6 +69,8 @@ $(document).ready(function () {
 let selection = document.querySelector("sub-menu");
 let result = document.querySelector("h2");
 
-selection.addEventListener("change", () => {
-  result.innerText = selection.option[selection.selectedIndex].index;
-});
+function reply_click(clicked_id) {
+  localStorage.setItem("page-value", clicked_id);
+  console.log(clicked_id);
+  //window.location.href = "/pages/" + clicked_id + ".html";
+}

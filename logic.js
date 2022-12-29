@@ -1,5 +1,11 @@
-import { examples } from "./Předměty/Matematika1.js";
+let selectedPage = localStorage.getItem("page-value");
+selectedPage.toString();
+import { examples } from "./Objects/Matematika1.js";
 
+// import("./Objects/" + selectedPage + ".js")
+//   .then((array) => {
+//     const { examples } = array;
+//console.log(array);
 function toggle(i) {
   const div = document.querySelector(`#result_${i}`);
   if (div.style.display !== "none") {
@@ -35,3 +41,7 @@ examples.forEach((ex, i) => {
 
   container.appendChild(card);
 });
+// })
+// .catch((err) => {
+//   console.log(err);
+// });

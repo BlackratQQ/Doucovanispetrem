@@ -45,7 +45,8 @@ body {
   height: 100vh;
   position: fixed;
   top: 0;
-  /* left: -250px; */
+  z-index: 50;
+  left: -250px;
   overflow-y: auto;
   transition: 0.6s ease;
   transition-property: left;
