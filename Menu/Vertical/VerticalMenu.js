@@ -5,10 +5,10 @@ class VerticalMenu extends HTMLElement {
     <i class="fas fa-bars"></i>
   </div>
   <div class="side-bar">
-    <header>
-      <div class="close-btn">
-        <i class="fas fa-times"></i>
-      </div>
+    <section>
+    <div class="close-btn">
+    <i class="fas fa-times"></i>
+  </div>
       <img
         src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
         alt="Logo"
@@ -39,38 +39,38 @@ class VerticalMenu extends HTMLElement {
           </div>
         </div>
       </div>
-    </header>
+    </section>
   </div>
   `;
   }
 }
 
-window.customElements.define('vertical-menu', VerticalMenu);
+window.customElements.define("vertical-menu", VerticalMenu);
 
 $(document).ready(function () {
   //jquery for toggle sub menus
-  $('.sub-btn').click(function () {
-    $(this).next('.sub-menu').slideToggle();
-    $(this).find('.dropdown').toggleClass('rotate');
+  $(".sub-btn").click(function () {
+    $(this).next(".sub-menu").slideToggle();
+    $(this).find(".dropdown").toggleClass("rotate");
   });
 
   //jquery for expand and collapse the sidebar
-  $('.menu-btn').click(function () {
-    $('.side-bar').addClass('active');
-    $('.menu-btn').css('visibility', 'hidden');
+  $(".menu-btn").click(function () {
+    $(".side-bar").addClass("active");
+    $(".menu-btn").css("visibility", "hidden");
   });
 
-  $('.close-btn').click(function () {
-    $('.side-bar').removeClass('active');
-    $('.menu-btn').css('visibility', 'visible');
+  $(".close-btn").click(function () {
+    $(".side-bar").removeClass("active");
+    $(".menu-btn").css("visibility", "visible");
   });
 });
 
-let selection = document.querySelector('sub-menu');
-let result = document.querySelector('h2');
+let selection = document.querySelector("sub-menu");
+let result = document.querySelector("h2");
 
 function reply_click(clicked_id) {
-  localStorage.setItem('page-value', clicked_id);
+  localStorage.setItem("page-value", clicked_id);
   console.log(clicked_id);
   //window.location.href = "/pages/" + clicked_id + ".html";
 }

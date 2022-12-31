@@ -1,12 +1,12 @@
 class HorizontalMenu extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = `    <header>
+    this.innerHTML = `    <section>
     <div class="container">
       <nav>
         <div class="menu-icons">
           <i class="fas fa-bars"></i>
-          <i class="fas fa-times"></i>
+          <i class="fas fa-times horizontal"></i>
         </div>
         <ul class="nav-list">
           <li>
@@ -75,15 +75,15 @@ class HorizontalMenu extends HTMLElement {
         </ul>
       </nav>
     </div>
-  </header>
+  </section>
   `;
   }
 }
 
-window.customElements.define('horizontal-menu', HorizontalMenu);
+window.customElements.define("horizontal-menu", HorizontalMenu);
 
 const selectElement = (element) => document.querySelector(element);
 
-selectElement('.menu-icons').addEventListener('click', () => {
-  selectElement('nav').classList.toggle('active');
+selectElement(".menu-icons").addEventListener("click", () => {
+  selectElement("nav").classList.toggle("active");
 });

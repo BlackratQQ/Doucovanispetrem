@@ -1,0 +1,6 @@
+{
+    "jsxBracketSameLine": true,
+    "htmlWhitespaceSensitivity": "ignore",
+    "tabWidth": 2,
+    "bracketSameLine": true
+  }

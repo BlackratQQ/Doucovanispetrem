@@ -1,37 +1,83 @@
-<div class="menu-btn">
-  <i class="fas fa-bars"></i>
-</div>
-<div id="examples-container"></div>
-<div class="side-bar">
-  <header>
-    <div class="close-btn">
-      <i class="fas fa-times"></i>
-    </div>
-    <img
-      src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
-      alt="Logo"
-    />
-    <h1>Logo</h1>
-    <div class="menu">
-      <div class="item">
-        <a href="#"><i class="fas fa-desktop"></i>Dashboard</a>
-        <div class="item">
-          <a class="sub-btn"
-            ><i class="fas fa-table"></i>Matematika<i
-              class="fas fa-angle-right dropdown"
-            ></i
-          ></a>
-          <div class="sub-menu">
-            <a href="/pages/matematika1.html" class="sub-item">Matematika#1</a>
-            <a href="" class="sub-item">Matematika#2</a>
-            <a href="" class="sub-item">Matematika#3</a>
-          </div>
-        </div>
-        <div class="item">
-          <a href="#"><i class="fas fa-th"></i>Forms</a>
-        </div>
-        <div class="item"></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <body>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
       </div>
-    </div>
-  </header>
-</div>
+      <div id="examples-container"></div>
+      <div class="side-bar">
+        <section>
+          <div class="close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <img
+            src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
+            alt="Logo" />
+          <h1>Logo</h1>
+          <div class="menu">
+            <div class="item">
+              <a href="#">
+                <i class="fas fa-desktop"></i>
+                Dashboard
+              </a>
+              <div class="item">
+                <a class="sub-btn">
+                  <i class="fas fa-table"></i>
+                  Matematika
+                  <i class="fas fa-angle-right dropdown"></i>
+                </a>
+                <div class="sub-menu">
+                  <a href="/pages/matematika1.html" class="sub-item">
+                    Matematika#1
+                  </a>
+                  <a href="" class="sub-item">Matematika#2</a>
+                  <a href="" class="sub-item">Matematika#3</a>
+                </div>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <i class="fas fa-th"></i>
+                  Forms
+                </a>
+              </div>
+              <div class="item"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          //jquery for expand and collapse the sidebar
+          $(".menu-btn").click(function () {
+            $(".side-bar").addClass("active");
+            $(".menu-btn").css("visibility", "hidden");
+          });
+
+          //For close button
+          $(".close-btn").click(function () {
+            $(".side-bar").removeClass("active");
+            $(".menu-btn").css("visibility", "visible");
+          });
+
+          //jquery for toggle sub menus
+          $(".sub-btn").click(function () {
+            $(this).next(".sub-menu").slideToggle();
+            $(this).find(".dropdown").toggleClass("rotate");
+          });
+        });
+      </script>
+    </body>
+  </body>
+</html>

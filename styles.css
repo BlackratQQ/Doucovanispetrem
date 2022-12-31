@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -11,6 +11,10 @@ body {
   color: white;
   background-size: cover;
   background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
 }
 
 #examples-container {
@@ -34,4 +38,43 @@ body {
 #result {
   display: none;
   color: red;
+}
+
+header {
+  background: #3c40c6;
+  padding: 2em 0 2em 0;
+}
+
+.left {
+  background: #3c40c6;
+  padding: 3em 0 3em 0;
+  flex: 1 1 150px;
+}
+main {
+  background: #3c40c6;
+  padding: 3em 0 3em 0;
+  flex: 100 100 150px;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.right {
+  background: #3c40c6;
+  padding: 3em 0 3em 0;
+  flex: 1 1 150px;
+}
+footer {
+  background: #3c40c6;
+  padding: 1em 0 1em 0;
+}
+@media screen and (max-width: 850px) {
+  .main {
+    flex-direction: column;
+  }
+  main {
+    padding: 5em 0 5em 0;
+  }
 }
