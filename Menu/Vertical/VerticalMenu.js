@@ -1,4 +1,4 @@
-class UserCard extends HTMLElement {
+class VerticalMenu extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `<div class="menu-btn">
@@ -45,32 +45,32 @@ class UserCard extends HTMLElement {
   }
 }
 
-window.customElements.define("user-card", UserCard);
+window.customElements.define('vertical-menu', VerticalMenu);
 
 $(document).ready(function () {
   //jquery for toggle sub menus
-  $(".sub-btn").click(function () {
-    $(this).next(".sub-menu").slideToggle();
-    $(this).find(".dropdown").toggleClass("rotate");
+  $('.sub-btn').click(function () {
+    $(this).next('.sub-menu').slideToggle();
+    $(this).find('.dropdown').toggleClass('rotate');
   });
 
   //jquery for expand and collapse the sidebar
-  $(".menu-btn").click(function () {
-    $(".side-bar").addClass("active");
-    $(".menu-btn").css("visibility", "hidden");
+  $('.menu-btn').click(function () {
+    $('.side-bar').addClass('active');
+    $('.menu-btn').css('visibility', 'hidden');
   });
 
-  $(".close-btn").click(function () {
-    $(".side-bar").removeClass("active");
-    $(".menu-btn").css("visibility", "visible");
+  $('.close-btn').click(function () {
+    $('.side-bar').removeClass('active');
+    $('.menu-btn').css('visibility', 'visible');
   });
 });
 
-let selection = document.querySelector("sub-menu");
-let result = document.querySelector("h2");
+let selection = document.querySelector('sub-menu');
+let result = document.querySelector('h2');
 
 function reply_click(clicked_id) {
-  localStorage.setItem("page-value", clicked_id);
+  localStorage.setItem('page-value', clicked_id);
   console.log(clicked_id);
   //window.location.href = "/pages/" + clicked_id + ".html";
 }
