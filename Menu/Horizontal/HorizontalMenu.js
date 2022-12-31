@@ -8,9 +8,6 @@ class HorizontalMenu extends HTMLElement {
           <i class="fas fa-bars"></i>
           <i class="fas fa-times"></i>
         </div>
-        <a href="/menu/Horizontal/HorizontalMenu.html" class="logo">
-          <i class="fa fa-shopping-bag"></i>
-        </a>
         <ul class="nav-list">
           <li>
             <a href="/menu/Horizontal/HorizontalMenu.html">HOME</a>
@@ -20,7 +17,7 @@ class HorizontalMenu extends HTMLElement {
               >Menu
               <i class="fas fa-angle-right dropdown"></i>
             </a>
-            <ul class="sub-menu">
+            <ul class="sub-menu-ver">
               <li>
                 <a href="#">Breakfast</a>
               </li>
@@ -29,7 +26,7 @@ class HorizontalMenu extends HTMLElement {
                   >Lunch
                   <i class="fas fa-angle-right dropdown"></i>
                 </a>
-                <ul class="sub-menu">
+                <ul class="sub-menu-ver">
                   <li>
                     <a href="#">Food</a>
                   </li>
@@ -41,7 +38,7 @@ class HorizontalMenu extends HTMLElement {
                       >More..
                       <i class="fas fa-angle-right dropdown"></i>
                     </a>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu-ver">
                       <li>
                         <a href="#">Food..</a>
                       </li>

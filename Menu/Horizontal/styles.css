@@ -39,13 +39,15 @@ header {
 }
 
 .menu-icons {
-  color: #eee;
+  color: rgb(0, 0, 0);
   font-size: 2.5rem;
   position: absolute;
+  font-size: 35px;
+  margin: 25px;
+  cursor: pointer;
   top: 50;
   right: 2rem;
   transform: translateY(-50%);
-  cursor: pointer;
   z-index: 1500;
   display: none;
 }
@@ -58,27 +60,12 @@ nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.logo {
-  width: 5rem;
-  height: 5rem;
-  background-color: #eb3007;
-  display: flex;
-  border-radius: 100%;
-  margin-right: 5rem;
-}
-
-.logo i {
-  margin: auto;
-  font-size: 3rem;
-  color: #eee;
-}
-
 /*NAV-LIST*/
 
 .nav-list {
   display: flex;
-  width: 100%;
   align-items: center;
+  margin: 0 auto;
 }
 
 .nav-list li {
@@ -86,7 +73,7 @@ nav {
   position: relative;
 }
 
-.sub-menu {
+.sub-menu-ver {
   line-height: 4rem;
 }
 .nav-list a {
@@ -116,7 +103,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.sub-menu {
+.sub-menu-ver {
   width: 20rem;
   display: block;
   position: absolute;
@@ -131,7 +118,7 @@ nav {
 }
 
 /*Trojúhelníky u menu*/
-.sub-menu::before {
+.sub-menu-ver::before {
   content: '';
   position: absolute;
   top: -2.5rem;
@@ -141,26 +128,26 @@ nav {
 }
 
 /*Side menu*/
-.sub-menu .sub-menu::before {
+.sub-menu-ver .sub-menu-ver::before {
   top: 0.4rem;
   left: -2.5rem;
   border: 1.2rem solid transparent;
   border-right-color: #eb3007;
 }
 
-.sub-menu .sub-menu {
+.sub-menu-ver .sub-menu-ver {
   border-top: none;
   border-left: 3px solid #eb3007;
   top: 0;
   left: 160%;
 }
 
-.nav-list li:hover > .sub-menu {
+.nav-list li:hover > .sub-menu-ver {
   opacity: 1;
   visibility: visible;
 }
 
-.sub-menu li:hover > .sub-menu {
+.sub-menu-ver li:hover > .sub-menu-ver {
   top: 0;
   left: 100%;
 }
@@ -182,13 +169,14 @@ li.move-right {
     background-color: #191919;
     z-index: 1000;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .nav-list > li {
     line-height: 6rem;
   }
 
-  .sub-menu {
+  .sub-menu-ver {
     position: initial;
     border: 3px solid transparent;
     border-left-color: #eb3007;
@@ -196,11 +184,11 @@ li.move-right {
     max-height: 0;
   }
 
-  .sub-menu::before {
+  .sub-menu-ver::before {
     display: none;
   }
 
-  .nav-list li:hover > .sub-menu {
+  .nav-list li:hover > .sub-menu-ver {
     opacity: 1;
     visibility: visible;
     max-height: initial;
@@ -228,7 +216,3 @@ li.move-right {
     display: flex;
   }
 }
-
-/* ::-webkit-scrollbar {
-  width: 2em;
-} */
