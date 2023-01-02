@@ -39,10 +39,10 @@ h1 {
 
 .side-bar .menu .item a {
   color: #fff;
-  font-size: 16px;
+  font-size: 1.1rem;
   text-decoration: none;
   display: block;
-  padding: 5px 10px;
+  padding: 5px 35px;
   line-height: 60px;
 }
 
@@ -68,7 +68,7 @@ h1 {
 }
 
 .side-bar .menu .item .sub-menu a {
-  padding-left: 30px;
+  padding-left: 45px;
 }
 
 .rotate {
@@ -90,12 +90,13 @@ h1 {
 }
 
 .menu-btn {
-  position: absolute;
   color: rgb(0, 0, 0);
+  position: absolute;
   font-size: 35px;
-  margin: 25px;
   cursor: pointer;
-  top: 2px;
+  top: 7px;
+  left: 14px;
+  z-index: 1500;
 }
 
 .menu-btn:hover {
