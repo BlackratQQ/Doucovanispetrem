@@ -2,12 +2,12 @@ class VerticalMenu extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `<div class="menu-btn">
-    <i class="fas fa-bars"></i>
+    <i class="fas fa-bars vertical"></i>
   </div>
   <div class="side-bar">
     <section>
     <div class="close-btn">
-    <i class="fas fa-times"></i>
+    <i class="fas fa-times vertical"></i>
   </div>
       <img
         src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"

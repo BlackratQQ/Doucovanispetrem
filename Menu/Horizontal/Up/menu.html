@@ -16,8 +16,8 @@
       <div class="container">
         <nav>
           <div class="menu-icons">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times"></i>
+            <i class="fas fa-bars horiozontal"></i>
+            <i class="fas fa-times horiozontal"></i>
           </div>
           <!-- <a href="/menu/Horizontal/HorizontalMenu.html" class="logo">
             <i class="fa fa-shopping-bag"></i>
@@ -448,6 +448,14 @@
         </nav>
       </div>
     </section>
-    <script src="Menu.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+      const selectElement = (element) => document.querySelector(element);
+
+      selectElement(".menu-icons").addEventListener("click", () => {
+        selectElement("nav").classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

@@ -51,7 +51,7 @@ body {
 /*GRID LAYOUT*/
 #grid {
   display: grid;
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 335px 1fr;
   grid-template-columns: 8.5% 83% 8.5%;
   gap: 0;
   width: 100vw;

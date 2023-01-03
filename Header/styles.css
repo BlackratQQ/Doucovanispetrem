@@ -1,5 +1,5 @@
-section {
-  height: 95vh;
+.banner {
+  height: 30vh;
   background-image: linear-gradient(
       to right,
       rgba(85, 197, 122, 0.6),
@@ -10,7 +10,7 @@ section {
   background-position: top;
   /*Zafixuje vršek obrázku, který se nebude ořezávat*/
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
 }
 
 .text-box {

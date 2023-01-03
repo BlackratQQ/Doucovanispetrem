@@ -24,7 +24,7 @@ ul {
   list-style: none;
 }
 
-section {
+header {
   width: 100%;
   position: absolute;
   top: 0;
@@ -35,6 +35,8 @@ section {
   width: 100%;
   /* max-width: 117rem; */
   margin: 0 auto;
+  padding: 0 1.5rem;
+  background-color: #007bff;
 }
 
 .menu-icons {
@@ -53,7 +55,7 @@ nav {
   align-items: center;
   width: 100%;
   height: 3rem;
-  background-color: #007bff;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
 /*NAV-LIST*/
@@ -75,11 +77,11 @@ nav {
 .nav-list a {
   display: block;
   color: #eee;
+  font-weight: bold;
   padding: 0 1.5rem;
   font-size: 1rem;
   text-transform: uppercase;
   transition: color 650ms;
-  font-weight: bold;
 }
 
 .nav-list a:hover {
@@ -94,20 +96,17 @@ nav {
   border-radius: 5rem;
   transition: backgrouznd-color 650ms;
 }
-.btn a {
-  color: black;
-}
 
 .btn:hover {
-  color: #ff8c00;
+  color: #eb3007;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .sub-menu-ver {
-  width: 22rem;
+  width: 20rem;
   display: block;
   position: absolute;
-  border-top: 3px solid #ff8c00;
+  border-top: 3px solid #007bff;
   background-color: #191919;
   z-index: 100;
   top: 4rem;
@@ -124,7 +123,7 @@ nav {
   top: -2.5rem;
   left: 3rem;
   border: 1.2rem solid transparent;
-  border-bottom-color: #ff8c00;
+  border-bottom-color: #007bff;
 }
 
 /*Side menu*/
@@ -132,12 +131,24 @@ nav {
   top: 0.4rem;
   left: -2.5rem;
   border: 1.2rem solid transparent;
-  border-right-color: #ff8c00;
+  border-right-color: #007bff;
+}
+
+.sub-menu-ver .sub-menu-ver li::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #007bff;
+  display: block;
+  margin: 0 10px;
 }
 
 .sub-menu-ver .sub-menu-ver {
   border-top: none;
-  border-left: 3px solid #ff8c00;
+  border-left: 3px solid #007bff;
   top: 0;
   left: 160%;
 }
@@ -157,19 +168,16 @@ li.move-right {
   line-height: initial;
 }
 
-.arrow-down {
-  transform: rotate(90deg);
-}
-
 @media screen and (max-width: 850px) {
   .nav-list {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     height: 100vh;
     display: none;
     flex-direction: column;
     align-items: initial;
+    background-color: #191919;
     z-index: 1000;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -182,7 +190,7 @@ li.move-right {
   .sub-menu-ver {
     position: initial;
     border: 3px solid transparent;
-    border-left-color: #ff8c00;
+    border-left-color: #eb3007;
     margin-left: 1rem;
     max-height: 0;
   }
@@ -205,8 +213,14 @@ li.move-right {
     display: block;
   }
 
-  .fa-times.horizontal {
+  .fa-times.horiozontal {
     display: none;
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    right: 0px;
+    margin: 15px;
+    cursor: pointer;
   }
   nav.active .fa-bars {
     display: none;

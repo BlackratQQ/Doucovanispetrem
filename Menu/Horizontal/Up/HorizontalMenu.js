@@ -5,8 +5,8 @@ class HorizontalMenu extends HTMLElement {
     <div class="container">
       <nav>
         <div class="menu-icons">
-          <i class="fas fa-bars"></i>
-          <i class="fas fa-times"></i>
+          <i class="fas fa-bars horiozontal"></i>
+          <i class="fas fa-times horiozontal"></i>
         </div>
         <!-- <a href="/menu/Horizontal/HorizontalMenu.html" class="logo">
           <i class="fa fa-shopping-bag"></i>
