@@ -1,46 +1,48 @@
 class VerticalMenu extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = `<div class="menu-btn">
-    <i class="fas fa-bars vertical"></i>
-  </div>
-  <div class="side-bar">
-    <section>
-    <div class="close-btn">
-    <i class="fas fa-times vertical"></i>
-  </div>
-      <img
-        src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
-        alt="Logo"
-      />
-      <h1>Logo</h1>
-      <div class="menu">
-        <div class="item">
-          <a href="#" 
-          id="statistika"
-          onClick="reply_click(this.id)>
-          <i class="fas fa-desktop"></i>
-          Statistika</a>
-
-          <div class="item">
-            <a class="sub-btn">
-            Matematika
-            <i class="fas fa-angle-right dropdown"></i></a>
-            <div class="sub-menu">
-              <a href="/pages/Matematika1.html" id="Matematika1" onClick="reply_click(this.id)"class="sub-item">Matematika#1</a>
-              <a href="/pages/Matematika2.html" id="Matematika2" onClick="reply_click(this.id)"class="sub-item">Matematika#2</a>
+    this.innerHTML = `      
+    <div class="menu-btn">
+        <i class="fas fa-bars vertical"></i>
+      </div>
+      <div class="side-bar">
+        <div class="close-btn">
+          <i class="fas fa-times vertical"></i>
+        </div>
+        <img
+          src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
+          alt="Logo" />
+        <h1>Logo</h1>
+        <div class="vertical-menu">
+          <div class="vertical-menu__item">
+            <a href="#">
+              <i class="fas fa-desktop"></i>
+              Dashboard
+            </a>
+            <div class="vertical-menu__item">
+              <a class="sub-btn">
+                <i class="fas fa-table"></i>
+                Matematika
+                <i class="fas fa-angle-right dropdown"></i>
+              </a>
+              <div class="sub-menu">
+                <a href="/pages/matematika1.html" class="sub-item">
+                  Matematika#1
+                </a>
+                <a href="" class="sub-item">Matematika#2</a>
+                <a href="" class="sub-item">Matematika#3</a>
+              </div>
             </div>
-          </div>
-          <div class="item">
-            <a href="#" 
-            id="ekonomy"onClick="reply_click(this.id)>
-            <i class="fas fa-th"></i>
-            Ekonomy</a>
+            <div class="vertical-menu__item">
+              <a href="#">
+                <i class="fas fa-th"></i>
+                Forms
+              </a>
+            </div>
+            <div class="vertical-menu__item"></div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
   `;
   }
 }
