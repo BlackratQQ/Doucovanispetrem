@@ -27,10 +27,12 @@ class VerticalMenu extends HTMLElement {
                   <i class="fas fa-angle-right dropdown"></i>
                 </a>
                 <div class="sub-menu">
-                  <a href="/pages/matematika1.html" class="sub-item">
-                    Matematika#1
+                  <a id="matematika1" href="/pages/matematika1.html" onClick="reply_click(this.id)" class="sub-item">
+                    Matematika#11
                   </a>
-                  <a href="" class="sub-item">Matematika#2</a>
+                  <a id="matematika2" href="/pages/matematika2.html" onClick="reply_click(this.id)" class="sub-item">
+                    Matematika#2
+                  </a>
                   <a href="" class="sub-item">Matematika#3</a>
                 </div>
               </div>
@@ -81,11 +83,16 @@ $(document).ready(function () {
   }
 });
 
-let selection = document.querySelector("sub-menu");
-let result = document.querySelector("h2");
+// function reply_click(clicked_id) {
+//   alert(clicked_id);
+// }
+
+// let selection = document.querySelector("sub-menu");
+// let result = document.querySelector("h2");
 
 function reply_click(clicked_id) {
   localStorage.setItem("page-value", clicked_id);
   console.log(clicked_id);
+  alert(clicked_id);
   //window.location.href = "/pages/" + clicked_id + ".html";
 }
