@@ -1,7 +1,17 @@
-class HorizontalMenu extends HTMLElement {
-  constructor() {
-    super();
-    this.innerHTML = `    <section>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
     <div class="container">
       <nav>
         <div class="menu-icons">
@@ -9,8 +19,8 @@ class HorizontalMenu extends HTMLElement {
           <i class="fas fa-times horiozontal"></i>
         </div>
         <!-- <a href="/menu/Horizontal/HorizontalMenu.html" class="logo">
-          <i class="fa fa-shopping-bag"></i>
-        </a> -->
+            <i class="fa fa-shopping-bag"></i>
+          </a> -->
         <ul class="nav-list">
           <li>
             <a href="https://www.doucovanispetrem.cz/videokurzy/">
@@ -436,15 +446,14 @@ class HorizontalMenu extends HTMLElement {
         </ul>
       </nav>
     </div>
-  </section>
-  `;
-  }
-}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
-window.customElements.define("horizontal-menu", HorizontalMenu);
+    <script>
+      const selectElement = (element) => document.querySelector(element);
 
-const selectElement = (element) => document.querySelector(element);
-
-selectElement(".menu-icons").addEventListener("click", () => {
-  selectElement("nav").classList.toggle("active");
-});
+      selectElement(".menu-icons").addEventListener("click", () => {
+        selectElement("nav").classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
