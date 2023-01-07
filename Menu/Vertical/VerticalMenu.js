@@ -57,15 +57,28 @@ $(document).ready(function () {
   });
 
   //jquery for expand and collapse the sidebar
-  $(".menu-btn").click(function () {
-    $(".side-bar").addClass("active");
-    $(".menu-btn").css("visibility", "hidden");
-  });
 
-  $(".close-btn").click(function () {
-    $(".side-bar").removeClass("active");
-    $(".menu-btn").css("visibility", "visible");
-  });
+  if (window.innerWidth > 850) {
+    $(".close-btn").click(function () {
+      $(".side-bar").addClass("non-active");
+      $(".menu-btn").css("visibility", "visible");
+    });
+
+    $(".menu-btn").click(function () {
+      $(".side-bar").removeClass("non-active");
+      $(".menu-btn").css("visibility", "hidden");
+    });
+  } else {
+    $(".side-bar").addClass("non-active");
+    $(".menu-btn").click(function () {
+      $(".side-bar").removeClass("non-active");
+      $(".menu-btn").css("visibility", "hidden");
+    });
+    $(".close-btn").click(function () {
+      $(".side-bar").addClass("non-active");
+      $(".menu-btn").css("visibility", "visible");
+    });
+  }
 });
 
 let selection = document.querySelector("sub-menu");
