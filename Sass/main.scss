@@ -23,6 +23,7 @@ body {
 }
 
 #examples-container {
+  margin-top: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -34,10 +35,6 @@ body {
   align-items: center;
   border: 1px solid #ff0000;
   width: 50%;
-}
-
-.toggle {
-  width: 80px;
 }
 
 #result {
@@ -52,4 +49,26 @@ body {
   main {
     padding: 5em 0 5em 0;
   }
+}
+
+.toggle {
+  color: red;
+  padding: 5px 40px;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #007bff;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: transparent;
+    transform: scale(0.95);
+  }
+}
+
+.text {
+  text-align: left;
 }

@@ -9,11 +9,20 @@ import("./Objects/" + selectedPage + ".js")
     console.log(array);
 
     function toggle(i) {
-      const div = document.querySelector(`#result_${i}`);
-      if (div.style.display !== "none") {
-        div.style.display = "none";
-      } else {
-        div.style.display = "block";
+      const divs = document.querySelectorAll(
+        `
+        #result_${i},
+        #whatToDo_${i},
+        #text_${i},
+        #image_${i}`
+      );
+
+      for (let div of divs) {
+        if (div.style.display !== "none") {
+          div.style.display = "none";
+        } else {
+          div.style.display = "block";
+        }
       }
     }
 
@@ -24,6 +33,12 @@ import("./Objects/" + selectedPage + ".js")
       const card = document.createElement("div");
       // Add the "card" class to the div
       card.classList.add("card");
+
+      //For What To Do
+      const whatToDo = document.createElement("div");
+      whatToDo.classList.add("whattodo");
+      whatToDo.innerHTML = ex.whatToDo;
+      card.appendChild(whatToDo);
 
       // Create the div for the <div class="example">${ex.question}</div>
       const example = document.createElement("div");
@@ -45,6 +60,7 @@ import("./Objects/" + selectedPage + ".js")
       // Add the toggle button to the card
       card.appendChild(button);
 
+      //For answer
       // Create the div for the <div id="result_${i}" class="result">${ex.answer}</div>
       const result = document.createElement("div");
       // Add the id for the element
@@ -57,6 +73,22 @@ import("./Objects/" + selectedPage + ".js")
       result.innerHTML = ex.answer;
       // Add the result element to the card
       card.appendChild(result);
+
+      //For Image
+      const image = document.createElement("div");
+      image.id = "image_" + i;
+      image.style.display = "none";
+      image.classList.add("image");
+      image.innerHTML = ex.image;
+      card.appendChild(image);
+
+      //For Text
+      const text = document.createElement("div");
+      text.id = "text_" + i;
+      text.style.display = "none";
+      text.classList.add("text");
+      text.innerHTML = ex.text;
+      card.appendChild(text);
 
       // Add the card to the container
       container.appendChild(card);
