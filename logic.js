@@ -34,6 +34,9 @@ import("./Objects/" + selectedPage + ".js")
       // Add the "card" class to the div
       card.classList.add("card");
 
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("wrapper");
+
       //For What To Do
       const whatToDo = document.createElement("div");
       whatToDo.classList.add("whattodo");
@@ -72,7 +75,7 @@ import("./Objects/" + selectedPage + ".js")
       // Set it's HTML to the answer
       result.innerHTML = ex.answer;
       // Add the result element to the card
-      card.appendChild(result);
+      wrapper.appendChild(result);
 
       //For Image
       const image = document.createElement("div");
@@ -80,7 +83,7 @@ import("./Objects/" + selectedPage + ".js")
       image.style.display = "none";
       image.classList.add("image");
       image.innerHTML = ex.image;
-      card.appendChild(image);
+      wrapper.appendChild(image);
 
       //For Text
       const text = document.createElement("div");
@@ -88,9 +91,10 @@ import("./Objects/" + selectedPage + ".js")
       text.style.display = "none";
       text.classList.add("text");
       text.innerHTML = ex.text;
-      card.appendChild(text);
+      wrapper.appendChild(text);
 
       // Add the card to the container
+      card.appendChild(wrapper);
       container.appendChild(card);
     });
   })
