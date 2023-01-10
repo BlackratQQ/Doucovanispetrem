@@ -79,14 +79,14 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: #00ff0d9f;
+  background-color: #00ff0d4f;
   width: 95%;
   height: auto;
   border-radius: 5px;
 }
 
 .clicked {
-  background-color: #00ff0d9f;
+  background-color: #00ff0d4f;
   transform: scale(0.9);
   color: #1b1a1b;
   &:hover {
