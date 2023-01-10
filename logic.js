@@ -34,6 +34,7 @@ import("./Objects/" + selectedPage + ".js")
       // Add the "card" class to the div
       card.classList.add("card");
 
+      //For Wrapper
       const wrapper = document.createElement("div");
       wrapper.classList.add("wrapper");
 
@@ -60,6 +61,10 @@ import("./Objects/" + selectedPage + ".js")
       button.innerHTML = "výsledek";
       // Add the onclick event listener
       button.addEventListener("click", () => toggle(i));
+      button.addEventListener("click", () =>
+        button.classList.toggle("clicked")
+      );
+      console.log(toggle(i));
       // Add the toggle button to the card
       card.appendChild(button);
 

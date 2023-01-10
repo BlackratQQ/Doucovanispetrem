@@ -12,8 +12,7 @@
 
 body {
   min-height: 100vh;
-  background: #333;
-  color: white;
+  color: black;
   background-size: cover;
   background-position: center;
 
@@ -40,7 +39,6 @@ body {
 
 #result {
   display: none;
-  color: red;
 }
 
 @media screen and (max-width: 850px) {
@@ -53,7 +51,6 @@ body {
 }
 
 .toggle {
-  color: red;
   padding: 5px 40px;
   border-radius: 5px;
   border: 1px solid #007bff;
@@ -65,14 +62,15 @@ body {
   transition: all 0.2s;
 
   &:hover {
-    background-color: transparent;
-    transform: scale(0.95);
+    background-color: #00ff0d9f;
+    color: #1b1a1b;
+    animation: pulse 1s infinite;
   }
 }
 
 .whattodo,
 .example {
-  width: 100%;
+  width: 95%;
   float: left;
 }
 
@@ -82,6 +80,28 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #00ff0d9f;
-  width: 100%;
+  width: 95%;
   height: auto;
+  border-radius: 5px;
+}
+
+.clicked {
+  background-color: #00ff0d9f;
+  transform: scale(0.9);
+  color: #1b1a1b;
+  &:hover {
+    animation: none;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.85);
+  }
+  to {
+    transform: scale(1);
+  }
 }
