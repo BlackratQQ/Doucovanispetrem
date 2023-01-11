@@ -38,15 +38,21 @@ function handleExamples(examples) {
         // Add the "card" class to the div
         card.classList.add("card");
 
-        //For Wrapper
-        const wrapper = document.createElement("div");
-        wrapper.classList.add("wrapper");
+        //For Number
+        const numberEx = document.createElement("div");
+        numberEx.classList.add("number-ex");
+        numberEx.innerHTML = "Příklad " + ex.numberEx;
+        card.appendChild(numberEx);
 
         //For What To Do
         const whatToDo = document.createElement("div");
         whatToDo.classList.add("whattodo");
         whatToDo.innerHTML = ex.whatToDo;
         card.appendChild(whatToDo);
+
+        //For Wrapper
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("wrapper");
 
         // Create the div for the <div class="example">${ex.question}</div>
         const example = document.createElement("div");
@@ -91,7 +97,7 @@ function handleExamples(examples) {
         image.id = "image_" + i;
         image.style.display = "none";
         image.classList.add("image");
-        image.innerHTML = ex.image;
+        image.innerHTML = "<img src=" + ex.image + ">";
         wrapper.appendChild(image);
 
         //For Text
@@ -99,7 +105,9 @@ function handleExamples(examples) {
         text.id = "text_" + i;
         text.style.display = "none";
         text.classList.add("text");
-        text.innerHTML = ex.text;
+        const pozn = document.createElement("div");
+        pozn.classList.add("pozn");
+        text.innerHTML = `<span class="note">Poznámka: </span>` + ex.text;
         wrapper.appendChild(text);
 
         // Add the card to the container
@@ -111,8 +119,3 @@ function handleExamples(examples) {
       .catch((err) => console.log(err.message));
   });
 }
-
-// })
-// .catch((err) => {
-//   console.log(err);
-// });

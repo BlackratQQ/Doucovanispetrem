@@ -10,19 +10,33 @@
     <script
       id="MathJax-script"
       async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="../styles.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
   </head>
   <body>
-    <vertical-menu></vertical-menu>
-    <script src="/Menu/Vertical/VerticalMenu.js"></script>
-    <div id="examples-container"></div>
-
+    <div id="grid">
+      <div id="div1">
+        <header>
+          <banner-img></banner-img>
+          <menu-down></menu-down>
+        </header>
+      </div>
+      <div id="div2">
+        <aside>
+          <vertical-menu></vertical-menu>
+        </aside>
+      </div>
+      <div id="div3">
+        <div id="examples-container"></div>
+      </div>
+      <div id="div4"></div>
+    </div>
+    <script src="../Menu/Horizontal/Down/MenuDown.js"></script>
+    <script src="../Menu/Vertical/VerticalMenu.js"></script>
+    <script src="../Header/Banner.js"></script>
     <script src="../logic.js" type="module"></script>
   </body>
 </html>

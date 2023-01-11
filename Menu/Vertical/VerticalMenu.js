@@ -10,9 +10,11 @@ class VerticalMenu extends HTMLElement {
           <div class="close-btn">
             <i class="fas fa-times vertical"></i>
           </div>
-          <img
-            src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
-            alt="Logo" />
+          <div class="logo">
+            <img
+              src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
+              alt="Logo" />
+          </div>
           <h1>Logo</h1>
           <div class="menu">
             <div class="item">
@@ -27,12 +29,10 @@ class VerticalMenu extends HTMLElement {
                   <i class="fas fa-angle-right dropdown"></i>
                 </a>
                 <div class="sub-menu">
-                  <a id="matematika1" href="/pages/matematika1.html" onClick="reply_click(this.id)" class="sub-item">
-                    Matematika#11
+                  <a href="/pages/matematika1.html" class="sub-item">
+                    Matematika#1
                   </a>
-                  <a id="matematika2" href="/pages/matematika2.html" onClick="reply_click(this.id)" class="sub-item">
-                    Matematika#2
-                  </a>
+                  <a href="" class="sub-item">Matematika#2</a>
                   <a href="" class="sub-item">Matematika#3</a>
                 </div>
               </div>
@@ -45,6 +45,8 @@ class VerticalMenu extends HTMLElement {
               <div class="item"></div>
             </div>
           </div>
+        </section>
+      </div>
   `;
   }
 }
@@ -83,16 +85,9 @@ $(document).ready(function () {
   }
 });
 
-// function reply_click(clicked_id) {
-//   alert(clicked_id);
-// }
-
-// let selection = document.querySelector("sub-menu");
-// let result = document.querySelector("h2");
-
 function reply_click(clicked_id) {
   localStorage.setItem("page-value", clicked_id);
-  console.log(clicked_id);
-  alert(clicked_id);
+  // console.log(clicked_id);
+  // alert(clicked_id);
   //window.location.href = "/pages/" + clicked_id + ".html";
 }

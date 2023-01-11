@@ -90,28 +90,7 @@ h1 {
   transition: 0.6s ease;
   animation: pulse 1s infinite; }
 
-/* .main {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-  }
-  
-  .main h1 {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 60px;
-    text-align: center;
-    line-height: 80px;
-  }
-  
-  @media (max-width: 900px) {
-    .main h1 {
-      font-size: 40px;
-      line-height: 60px;
-    }
-  } */
-img {
+.logo img {
   width: 100px;
   margin: 15px;
   margin-left: 70px; }
@@ -505,6 +484,9 @@ body {
     color: #1b1a1b;
     animation: pulse 1s infinite; }
 
+.result {
+  padding-top: 10px; }
+
 .whattodo,
 .example {
   width: 95%;
@@ -526,6 +508,23 @@ body {
   color: #1b1a1b; }
   .clicked:hover {
     animation: none; }
+
+.number-ex {
+  font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: left;
+  width: 95%; }
+
+.text {
+  width: 95%;
+  justify-content: left;
+  padding-bottom: 10px; }
+
+.image {
+  padding: 10px; }
+
+.note {
+  font-weight: bold; }
 
 @keyframes pulse {
   from {
