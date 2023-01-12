@@ -1,4 +1,4 @@
-class MenuDown extends HTMLElement {
+class menudown extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `    
@@ -8,7 +8,7 @@ class MenuDown extends HTMLElement {
             <i class="fas fa-bars horiozontal"></i>
             <i class="fas fa-times horiozontal"></i>
           </div>
-          <!-- <a href="/menu/Horizontal/HorizontalMenu.html" class="logo">
+          <!-- <a href="/menu/horizontal/horizontalmenu.html" class="logo">
             <i class="fa fa-shopping-bag"></i>
           </a> -->
           <ul class="nav-list">
@@ -440,7 +440,7 @@ class MenuDown extends HTMLElement {
   }
 }
 
-window.customElements.define("menu-down", MenuDown);
+window.customElements.define("menu-down", menudown);
 
 const selectElement = (element) => document.querySelector(element);
 

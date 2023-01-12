@@ -1,57 +1,101 @@
-class VerticalMenu extends HTMLElement {
+class verticalmenu extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `      
     <div class="menu-btn">
-        <i class="fas fa-bars vertical"></i>
+    <i class="fas fa-bars vertical"></i>
+  </div>
+  <div class="side-bar">
+    <section>
+      <div class="close-btn">
+        <i class="fas fa-times vertical"></i>
       </div>
-      <div class="side-bar">
-        <section>
-          <div class="close-btn">
-            <i class="fas fa-times vertical"></i>
-          </div>
-          <div class="logo">
-            <img
-              src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
-              alt="Logo" />
-          </div>
-          <h1>Logo</h1>
-          <div class="menu">
-            <div class="item">
-              <a href="#">
-                <i class="fas fa-desktop"></i>
-                Dashboard
+      <div class="logo">
+        <img
+          src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
+          alt="Logo" />
+      </div>
+      <h1>Logo</h1>
+      <div class="menu">
+        <div class="item">
+          <a href="#">
+            <i class="fas fa-desktop"></i>
+            Dashboard
+          </a>
+          <div class="item">
+            <a class="sub-btn">
+              <i class="fas fa-table"></i>
+              Matematika
+              <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+              <a
+                href="/pages/zakladni-operace.html"
+                id="zakladni-operace"
+                onClick="reply_click(this.id)"
+                class="sub-item">
+                Základní operace
               </a>
-              <div class="item">
-                <a class="sub-btn">
-                  <i class="fas fa-table"></i>
-                  Matematika
-                  <i class="fas fa-angle-right dropdown"></i>
-                </a>
-                <div class="sub-menu">
-                  <a href="/pages/matematika1.html" class="sub-item">
-                    Matematika#1
-                  </a>
-                  <a href="" class="sub-item">Matematika#2</a>
-                  <a href="" class="sub-item">Matematika#3</a>
-                </div>
-              </div>
-              <div class="item">
-                <a href="#">
-                  <i class="fas fa-th"></i>
-                  Forms
-                </a>
-              </div>
-              <div class="item"></div>
+              <a
+                href="/pages/hodnost.html"
+                id="hodnost"
+                onClick="reply_click(this.id)"
+                class="sub-item">
+                Hodnost
+              </a>
+              <a
+                href="/pages/matematika1.html"
+                id="zakladni-operace"
+                onClick="reply_click(this.id)"
+                class="sub-item">
+                Základní operace
+              </a>
+              <a
+                href="/pages/matematika1.html"
+                id="zakladni-operace"
+                onClick="reply_click(this.id)"
+                class="sub-item">
+                Základní operace
+              </a>
+              <a
+                href="/pages/matematika1.html"
+                id="zakladni-operace"
+                onClick="reply_click(this.id)"
+                class="sub-item">
+                Základní operace
+              </a>
+              <a
+                href="/pages/matematika1.html"
+                id="zakladni-operace"
+                onClick="reply_click(this.id)"
+                class="sub-item">
+                Základní operace
+              </a>
+              <a
+                href="/pages/matematika1.html"
+                id="zakladni-operace"
+                onClick="reply_click(this.id)"
+                class="sub-item">
+                Základní operace
+              </a>
             </div>
           </div>
-        </section>
+          <div class="item">
+            <a href="#">
+              <i class="fas fa-th"></i>
+              Forms
+            </a>
+          </div>
+          <div class="item"></div>
+        </div>
       </div>
+    </section>
+  </div>
   `;
   }
 }
 
-window.customElements.define("vertical-menu", VerticalMenu);
+window.customElements.define("vertical-menu", verticalmenu);
 
 $(document).ready(function () {
   //jquery for toggle sub menus

@@ -1,4 +1,4 @@
-class BannerImg extends HTMLElement {
+class bannerimg extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `            
@@ -17,4 +17,4 @@ class BannerImg extends HTMLElement {
   }
 }
 
-window.customElements.define("banner-img", BannerImg);
+window.customElements.define("banner-img", bannerimg);

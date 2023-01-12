@@ -1,6 +1,6 @@
 let selectedPage = localStorage.getItem("page-value");
 
-const path = `./Objects/${selectedPage.toString()}.js`;
+const path = `./objects/${selectedPage.toString()}.js`;
 
 initMath();
 
