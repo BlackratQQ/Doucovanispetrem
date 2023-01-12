@@ -1,5 +1,13 @@
 export const examples = [
   {
+    numberEx: "6",
+    whatToDo: "vyděl",
+    question: "$$ \\lim _{y \\rightarrow 9}\\left(x^2-4\\right) $$",
+    answer: "(answer for 3)",
+    text: "Text6",
+    image: "../images/algoritmus2k.svg",
+  },
+  {
     numberEx: "1",
     whatToDo: "Najděte všechna možná řešení a vypočítej obsah 1D krychle",
     question: "\\(ax^2 + bx +c = 0\\)",
@@ -38,14 +46,6 @@ export const examples = [
     question: "$$ \\lim _{x \\rightarrow 4}\\left(x^4-4\\right) $$",
     answer: "(answer for 3)",
     text: "Text5",
-    image: "../images/algoritmus2k.svg",
-  },
-  {
-    numberEx: "6",
-    whatToDo: "vyděl",
-    question: "$$ \\lim _{y \\rightarrow 9}\\left(x^2-4\\right) $$",
-    answer: "(answer for 3)",
-    text: "Text6",
     image: "../images/algoritmus2k.svg",
   },
 ];

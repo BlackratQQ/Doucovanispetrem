@@ -1,5 +1,13 @@
 export const examples = [
   {
+    numberEx: "4",
+    whatToDo: "vyděl",
+    question: "$$ \\lim _{x \\rightarrow 2}\\left(x^2-4\\right) $$",
+    answer: "(answer for 3)",
+    text: "Text4",
+    image: "../images/algoritmus2k.svg",
+  },
+  {
     numberEx: "1",
     whatToDo: "Najděte všechna možná řešení a vypočítej obsah 1D krychle",
     question: "\\(ax^2 + bx +c = 0\\)",
@@ -22,14 +30,6 @@ export const examples = [
     question: "$$y=\\frac{1-\\sqrt{x}}{1+\\sqrt{x}}$$",
     answer: "(answer for 3)",
     text: "Text3",
-    image: "../images/algoritmus2k.svg",
-  },
-  {
-    numberEx: "4",
-    whatToDo: "vyděl",
-    question: "$$ \\lim _{x \\rightarrow 2}\\left(x^2-4\\right) $$",
-    answer: "(answer for 3)",
-    text: "Text4",
     image: "../images/algoritmus2k.svg",
   },
   {
