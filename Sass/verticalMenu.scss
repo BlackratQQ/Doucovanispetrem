@@ -1,7 +1,7 @@
 .side-bar {
   background: #1b1a1b;
   backdrop-filter: blur(15px);
-  width: 250px;
+  width: 14.6%;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -16,7 +16,7 @@
 }
 
 .side-bar.non-active {
-  left: -250px;
+  left: -14.6%;
 }
 
 .side-bar.active {
@@ -42,12 +42,12 @@ h1 {
 }
 
 .side-bar .menu .item a {
-  color: #fff;
-  font-size: 1.1rem;
+  color: white;
+  font-size: var(--fs-400);
   text-decoration: none;
   display: block;
-  padding: 5px 35px;
-  line-height: 60px;
+  padding: 20px 35px;
+  line-height: 25px;
 }
 
 .side-bar .menu .item a:hover {
@@ -62,7 +62,7 @@ h1 {
 .side-bar .menu .item a .dropdown {
   position: absolute;
   right: 0;
-  margin: 20px;
+  // margin: 20px;
   transition: 0.3s ease;
 }
 
@@ -95,7 +95,7 @@ h1 {
 
 .menu-btn {
   color: rgb(0, 0, 0);
-  position: absolute;
+  position: fixed;
   font-size: 35px;
   cursor: pointer;
   top: 7px;
@@ -108,9 +108,12 @@ h1 {
 }
 
 .logo img {
-  width: 100px;
-  margin: 15px;
-  margin-left: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 20px;
+  cursor: pointer;
 }
 
 @keyframes pulse {

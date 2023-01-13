@@ -2,6 +2,7 @@
 @import "horizontalmenus";
 @import "header";
 @import "grid";
+@import "fontsizes";
 
 * {
   margin: 0;
@@ -19,6 +20,27 @@ body {
   display: flex;
   flex-direction: column;
   height: 95vh;
+}
+
+h1 {
+  color: #fff;
+}
+
+h2 {
+  display: flex;
+  position: absolute;
+  margin: 20px;
+  font-size: var(--fs-xl);
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    bottom: 0px;
+    left: 10%;
+    border-bottom: 3px solid #007bff;
+  }
 }
 
 #examples-container {
@@ -45,9 +67,14 @@ body {
 @media screen and (max-width: 850px) {
   .main {
     flex-direction: column;
-  }
-  main {
     padding: 5em 0 5em 0;
+  }
+  .card,
+  .wrapper {
+    width: 100%;
+  }
+  .image {
+    transform: scale(0.7);
   }
 }
 
@@ -76,7 +103,12 @@ body {
 .whattodo,
 .example {
   width: 95%;
-  float: left;
+}
+
+.example {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
 .wrapper {
@@ -100,10 +132,11 @@ body {
 }
 
 .number-ex {
-  font-size: 1.5rem;
+  font-size: var(--fs-600);
   font-weight: bold;
   justify-content: left;
   width: 95%;
+  padding-top: 20px;
 }
 
 .text {
@@ -118,6 +151,10 @@ body {
 
 .note {
   font-weight: bold;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  margin: 0em 0px !important;
 }
 
 @keyframes pulse {

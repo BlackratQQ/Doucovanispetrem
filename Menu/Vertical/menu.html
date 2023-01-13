@@ -11,111 +11,104 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <body>
-      <div class="menu-btn">
-        <i class="fas fa-bars vertical"></i>
-      </div>
-      <div class="side-bar">
-        <section>
-          <div class="close-btn">
-            <i class="fas fa-times vertical"></i>
-          </div>
-          <div class="logo">
+    <div class="menu-btn">
+      <i class="fas fa-bars vertical"></i>
+    </div>
+    <div class="side-bar">
+      <section>
+        <div class="close-btn">
+          <i class="fas fa-times vertical"></i>
+        </div>
+        <div class="logo">
+          <a href="https://priklady.doucovanispetrem.cz/">
             <img
-              src="https://www.doucovanispetrem.cz/wp-content/uploads/2022/06/cropped-cropped-Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
+              src="../../Doucovani-Matika-Statistika-Ekonomicke-metody-IKONA.png"
               alt="Logo" />
-          </div>
-          <h1>Logo</h1>
-          <div class="menu">
+          </a>
+        </div>
+        <h1>Doučování</h1>
+        <div class="menu">
+          <div class="item">
+            <a href="#">Dashboard</a>
             <div class="item">
-              <a href="#">
-                <i class="fas fa-desktop"></i>
-                Dashboard
+              <a class="sub-btn">
+                Matice
+                <i class="fas fa-angle-right dropdown"></i>
               </a>
-              <div class="item">
-                <a class="sub-btn">
-                  <i class="fas fa-table"></i>
-                  Matice
-                  <i class="fas fa-angle-right dropdown"></i>
+              <div class="sub-menu">
+                <a
+                  href="/pages/zakladni-operace.html"
+                  id="zakladni-operace"
+                  onClick="reply_click(this.id)"
+                  class="sub-item">
+                  Základní operace
                 </a>
-                <div class="sub-menu">
-                  <a
-                    href="/pages/zakladni-operace.html"
-                    id="zakladni-operace"
-                    onClick="reply_click(this.id)"
-                    class="sub-item">
-                    Základní operace
-                  </a>
-                  <a
-                    href="/pages/hodnost.html"
-                    id="hodnost"
-                    onClick="reply_click(this.id)"
-                    class="sub-item">
-                    Hodnost
-                  </a>
-                  <a
-                    href="/pages/determinanty.html"
-                    id="determinanty"
-                    onClick="reply_click(this.id)"
-                    class="sub-item">
-                    Determinanty
-                  </a>
-                  <a
-                    href="/pages/inverzni-matice.html"
-                    id="inverzni-matice"
-                    onClick="reply_click(this.id)"
-                    class="sub-item">
-                    Inverzní matice
-                  </a>
-                  <a
-                    href="/pages/maticove-rovnice.html"
-                    id="maticove-rovnice"
-                    onClick="reply_click(this.id)"
-                    class="sub-item">
-                    Maticové rovnice
-                  </a>
-                  <a
-                    href="/pages/vlastni-cisla-a-vektory.html"
-                    id="vlastni-cisla-a-vektory"
-                    onClick="reply_click(this.id)"
-                    class="sub-item">
-                    Vlastní čísla a vektory
-                  </a>
-                </div>
-              </div>
-              <div class="item">
-                <a href="#">
-                  <i class="fas fa-th"></i>
-                  Forms
+                <a
+                  href="/pages/hodnosti.html"
+                  id="hodnosti"
+                  onClick="reply_click(this.id)"
+                  class="sub-item">
+                  Hodnost
+                </a>
+                <a
+                  href="/pages/determinanty.html"
+                  id="determinanty"
+                  onClick="reply_click(this.id)"
+                  class="sub-item">
+                  Determinanty
+                </a>
+                <a
+                  href="/pages/inverzni-matice.html"
+                  id="inverzni-matice"
+                  onClick="reply_click(this.id)"
+                  class="sub-item">
+                  Inverzní matice
+                </a>
+                <a
+                  href="/pages/maticove-rovnice.html"
+                  id="maticove-rovnice"
+                  onClick="reply_click(this.id)"
+                  class="sub-item">
+                  Maticové rovnice
+                </a>
+                <a
+                  href="/pages/vlastni-cisla-a-vektory.html"
+                  id="vlastni-cisla-a-vektory"
+                  onClick="reply_click(this.id)"
+                  class="sub-item">
+                  Vlastní čísla a vektory
                 </a>
               </div>
-              <div class="item"></div>
             </div>
+            <div class="item">
+              <a href="#">Forms</a>
+            </div>
+            <div class="item"></div>
           </div>
-        </section>
-      </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-      <script>
-        $(document).ready(function () {
-          //jquery for expand and collapse the sidebar
-          $(".menu-btn").click(function () {
-            $(".side-bar").addClass("active");
-            $(".menu-btn").css("visibility", "hidden");
-          });
-
-          //For close button
-          $(".close-btn").click(function () {
-            $(".side-bar").removeClass("active");
-            $(".menu-btn").css("visibility", "visible");
-          });
-
-          //jquery for toggle sub menus
-          $(".sub-btn").click(function () {
-            $(this).next(".sub-menu").slideToggle();
-            $(this).find(".dropdown").toggleClass("rotate");
-          });
+        </div>
+      </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //jquery for expand and collapse the sidebar
+        $(".menu-btn").click(function () {
+          $(".side-bar").addClass("active");
+          $(".menu-btn").css("visibility", "hidden");
         });
-      </script>
-    </body>
+
+        //For close button
+        $(".close-btn").click(function () {
+          $(".side-bar").removeClass("active");
+          $(".menu-btn").css("visibility", "visible");
+        });
+
+        //jquery for toggle sub menus
+        $(".sub-btn").click(function () {
+          $(this).next(".sub-menu").slideToggle();
+          $(this).find(".dropdown").toggleClass("rotate");
+        });
+      });
+    </script>
   </body>
 </html>
