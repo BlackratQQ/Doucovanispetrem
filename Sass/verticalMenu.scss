@@ -2,6 +2,8 @@
   background: #1b1a1b;
   backdrop-filter: blur(15px);
   width: 14.6%;
+  min-width: 165px;
+  max-width: 250px;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -16,7 +18,7 @@
 }
 
 .side-bar.non-active {
-  left: -14.6%;
+  left: -250px;
 }
 
 .side-bar.active {
@@ -107,11 +109,15 @@ h1 {
   animation: pulse 1s infinite;
 }
 
-.logo img {
+.logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 75%;
+}
+
+.logo img {
+  width: 100%;
   padding-top: 20px;
   cursor: pointer;
 }
@@ -125,5 +131,11 @@ h1 {
   }
   to {
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .side-bar {
+    width: 250px;
   }
 }

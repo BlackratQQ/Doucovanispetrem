@@ -64,15 +64,18 @@ h2 {
   display: none;
 }
 
+@media screen and (max-width: 1024px) {
+  .card,
+  .wrapper {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 850px) {
   .main {
     flex-direction: column;
     padding: 5em 0 5em 0;
   }
-  .card,
-  .wrapper {
-    width: 100%;
-  }
+
   .image {
     transform: scale(0.7);
   }
