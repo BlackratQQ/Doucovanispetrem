@@ -297,6 +297,8 @@ li.move-right {
     line-height: initial; }
   .menu-icons {
     display: block; }
+  nav {
+    height: 0; }
   .fa-times.horiozontal {
     display: none;
     color: white;
@@ -431,7 +433,7 @@ li.move-right {
 #grid {
   display: grid;
   grid-template-rows: 35.3% 1fr;
-  grid-template-columns: 14.6% 76.9% 8.5%;
+  grid-template-columns: 16% 75.5% 8.5%;
   gap: 0;
   width: 100vw;
   height: 100vh; }
@@ -447,6 +449,10 @@ li.move-right {
 
 #div4 {
   grid-area: 2 / 3 / 3 / 4; }
+
+@media screen and (max-width: 850px) {
+  #grid {
+    grid-template-columns: 8.5% 83% 8.5%; } }
 
 :root {
   --fs-xl: clamp(3rem, 1vw + 1rem, 3.5rem);
@@ -473,9 +479,8 @@ h1 {
   color: #fff; }
 
 h2 {
-  display: flex;
   position: absolute;
-  margin: 20px;
+  font-size: 3rem;
   font-size: var(--fs-xl); }
   h2:before {
     content: "";
@@ -485,6 +490,9 @@ h2 {
     bottom: 0px;
     left: 10%;
     border-bottom: 3px solid #007bff; }
+
+.page {
+  color: red; }
 
 #examples-container {
   margin-top: 100px;
@@ -513,7 +521,11 @@ h2 {
     flex-direction: column;
     padding: 5em 0 5em 0; }
   .image {
-    transform: scale(0.7); } }
+    transform: scale(0.7); }
+  h2 {
+    transform: translateX(-50%);
+    width: max-content;
+    left: 50%; } }
 
 .toggle {
   padding: 5px 40px;

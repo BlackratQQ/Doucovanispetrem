@@ -1,7 +1,7 @@
 #grid {
   display: grid;
   grid-template-rows: 35.3% 1fr;
-  grid-template-columns: 14.6% 76.9% 8.5%;
+  grid-template-columns: 16% 75.5% 8.5%;
   gap: 0;
   width: 100vw;
   height: 100vh;
@@ -24,4 +24,10 @@
 #div4 {
   grid-area: 2 / 3 / 3 / 4;
   // background-color: rgba(11, 38, 185, 0.5);
+}
+
+@media screen and (max-width: 850px) {
+  #grid {
+    grid-template-columns: 8.5% 83% 8.5%;
+  }
 }

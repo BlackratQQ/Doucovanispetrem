@@ -10,14 +10,14 @@ export const examples = [
   },
   {
     numberEx: "1",
-    whatToDo: "Najděte všechna možná řešení a vypočítej obsah 1D krychle",
+    whatToDo: "Najděte všechna možná řešenBí a vypočítej obsah 1D krychle",
     question: "\\(ax^2 + bx +c = 0\\)",
     answer: "\\(ax^2 + bx +c = 0\\)",
     text: "Jsi blbec. 1D krychle neexistuje",
     image: "../images/logaritmicka-funkce-graf.png",
   },
   {
-    numberEx: "3",
+    numberEx: "33",
     whatToDo: "vyděl",
     question: "$$y=\\frac{1-\\sqrt{x}}{1+\\sqrt{x}}$$",
     answer: "(answer for 3)",
@@ -38,14 +38,6 @@ export const examples = [
     question: "$$ \\lim _{x \\rightarrow 4}\\left(x^4-4\\right) $$",
     answer: "(answer for 3)",
     text: "Text5",
-    image: "../images/algoritmus2k.svg",
-  },
-  {
-    numberEx: "6",
-    whatToDo: "vyděl",
-    question: "$$ \\lim _{y \\rightarrow 9}\\left(x^2-4\\right) $$",
-    answer: "(answer for 3)",
-    text: "Text6",
     image: "../images/algoritmus2k.svg",
   },
 ];
