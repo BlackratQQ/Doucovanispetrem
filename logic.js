@@ -28,6 +28,10 @@ function handleExamples(examples) {
     }
   }
 
+  function scrollWin() {
+    window.scrollBy(0, 100);
+  }
+
   const container = document.querySelector("#examples-container");
 
   examples.forEach((ex, i) => {
@@ -74,6 +78,7 @@ function handleExamples(examples) {
         button.addEventListener("click", () =>
           button.classList.toggle("clicked")
         );
+        button.addEventListener("click", () => scrollWin());
         console.log(toggle(i));
         // Add the toggle button to the card
         card.appendChild(button);

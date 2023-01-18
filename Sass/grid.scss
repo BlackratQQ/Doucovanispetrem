@@ -26,6 +26,12 @@
   // background-color: rgba(11, 38, 185, 0.5);
 }
 
+@media screen and (max-width: 1024px) {
+  #grid {
+    grid-template-columns: 20% 78% 2%;
+  }
+}
+
 @media screen and (max-width: 850px) {
   #grid {
     grid-template-columns: 8.5% 83% 8.5%;

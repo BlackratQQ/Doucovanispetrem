@@ -168,6 +168,12 @@ li.move-right {
   line-height: initial;
 }
 
+@media screen and (max-width: 1024px) {
+  .nav-list {
+    margin: 0 0 0 auto;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .nav-list {
     position: fixed;

@@ -260,6 +260,10 @@ li.move-right {
   margin: auto 0 auto auto;
   line-height: initial; }
 
+@media screen and (max-width: 1024px) {
+  .nav-list {
+    margin: 0 0 0 auto; } }
+
 @media screen and (max-width: 850px) {
   .nav-list {
     position: fixed;
@@ -449,6 +453,10 @@ li.move-right {
 
 #div4 {
   grid-area: 2 / 3 / 3 / 4; }
+
+@media screen and (max-width: 1024px) {
+  #grid {
+    grid-template-columns: 20% 78% 2%; } }
 
 @media screen and (max-width: 850px) {
   #grid {
